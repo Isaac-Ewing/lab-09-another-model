@@ -10,9 +10,9 @@ describe('anotherOne routes', () => {
 
   it('I dont know what my model is doing, but im making a failing test', async () => {
     const res = await request(app)
-      .post('/api/v1/yerrrrr')
-      .send('yerrrrr');
+      .post('/api/v1/soup')
+      .send({ ingredients: 'soup stuff' });
 
-    expect(res.body).toEqual('huh');
+    expect(res.body).toEqual({ id: '1', ingredients: 'soup stuff' });
   });
 });
